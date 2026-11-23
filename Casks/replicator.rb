@@ -2,24 +2,24 @@
 cask "replicator" do
   postflight_steps do
     on_macos do
-      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/replicator"]
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/replicator"]
     end
   end
 
-  version "0.7.0"
+  version "0.7.1"
 
   on_macos do
     depends_on arch: :arm64
-    sha256 "dcf6fe8ca6b381d7c2e600550a3dc5dd31a54b8ff3e3609a43e665eb13ece0ee"
+    sha256 "d80c0d634d59e6f14938d0a72b27dc8bb2069da738ebb1a5ab1bce97d66fe663"
     url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_darwin_arm64.tar.gz"
   end
   on_linux do
     on_arm do
-      sha256 "66bdba8582b4275783ab1c804da8704ac3ea8d46a7d22ec694b3b7c7bef20bf1"
+      sha256 "f262541ca5343e4918b9e57ba5ff388e50f6cb929e2f74ff87e09d4be9d38a21"
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "9ff366bcf82c8551bd7056d86ca1f04ce86e4a8e1a6daab041527714d445e037"
+      sha256 "e45d0ae03a7c770992f893075dcc52d2ddaa40a56508d9106c1046e79f976906"
       url "https://github.com/unbound-force/replicator/releases/download/v#{version}/replicator_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -34,5 +34,5 @@ cask "replicator" do
 
   binary "replicator"
 
-  # No zap stanza required
+  zap :not_required
 end
