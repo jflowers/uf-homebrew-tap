@@ -5,12 +5,12 @@
 class UnboundForce < Formula
   desc "Unbound Force specification framework toolkit"
   homepage "https://github.com/unbound-force/unbound-force"
-  version "0.22.0"
+  version "0.23.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/unbound-force/unbound-force/releases/download/v0.22.0/unbound-force_0.22.0_darwin_amd64.tar.gz"
-      sha256 "b07f93621bfc5a2540202cd32e8a38302c1d886209e9609ca2aad9fd0c83637f"
+      url "https://github.com/unbound-force/unbound-force/releases/download/v0.23.0/unbound-force_0.23.0_darwin_amd64.tar.gz"
+      sha256 "63c8ebbf3d04bd6882a24b600a48e01c80aead030f010952d1ea3b1b5666e373"
 
       define_method(:install) do
         bin.install "unbound-force"
@@ -18,8 +18,8 @@ class UnboundForce < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/unbound-force/unbound-force/releases/download/v0.22.0/unbound-force_0.22.0_darwin_arm64.tar.gz"
-      sha256 "93d00b495ea866877a62a10a7dc785d7b1d2728eaa5b4ab912667fc39ff2c884"
+      url "https://github.com/unbound-force/unbound-force/releases/download/v0.23.0/unbound-force_0.23.0_darwin_arm64.tar.gz"
+      sha256 "3ae2871e2bbe99a5748d1fdc199e533b7b8e2b42308764756ecb59fdd2c967ac"
 
       define_method(:install) do
         bin.install "unbound-force"
@@ -30,16 +30,16 @@ class UnboundForce < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/unbound-force/unbound-force/releases/download/v0.22.0/unbound-force_0.22.0_linux_amd64.tar.gz"
-      sha256 "84966856908ae366ac6c3f0f1d57af09bf747a8c35c01bb993dc3a027af1c6ce"
+      url "https://github.com/unbound-force/unbound-force/releases/download/v0.23.0/unbound-force_0.23.0_linux_amd64.tar.gz"
+      sha256 "4be6cbb63b65ce698cd30bacdd843a5bf82ed0701e5d47141cc8501e33772e9d"
       define_method(:install) do
         bin.install "unbound-force"
         bin.install_symlink "unbound-force" => "uf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/unbound-force/unbound-force/releases/download/v0.22.0/unbound-force_0.22.0_linux_arm64.tar.gz"
-      sha256 "a9f374ab0f06eb0c5c58de48fd87914b6a8961683fee4cf0c686a1ae29a11f3c"
+      url "https://github.com/unbound-force/unbound-force/releases/download/v0.23.0/unbound-force_0.23.0_linux_arm64.tar.gz"
+      sha256 "3e323fa18f42fd7b57fb1f5df7f1ed8f6dfcda2da7293689d8b8377a6aaf0d1f"
       define_method(:install) do
         bin.install "unbound-force"
         bin.install_symlink "unbound-force" => "uf"
